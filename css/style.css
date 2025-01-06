@@ -1,53 +1,57 @@
 @import url("reset.css");
 
-html {
-	padding: 0;
-	margin: 0;
-}
-
 body {
-	color: #333333;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 16px;
-	line-height: 1.6;
-	background-color: #f9f9f9;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: "Courier New", Courier, monospace;
+	background: linear-gradient(to bottom, #2a2a72, #9013fe); /* Gradient from dark blue to purple */
+	font-family: Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+  }
+  
+  .quote-container {
+	color: white;
+	text-align: center;
+	padding: 40px;
+	border: 2px solid rgba(255, 255, 255, 0.5);
+	border-radius: 8px;
+	max-width: 600px;
+	background: rgba(0, 0, 0, 0.3); /* Slight dark overlay */
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Adds a shadow */
+  }
+  
+  .quote-container .quote {
+	font-size: 50px;
 	font-weight: bold;
-	line-height: 1;
-	text-transform: uppercase;
-	margin: 0 0 1.6rem;
-}
-
-p {
-	font-family: Arial, Helvetica, sans-serif;
 	line-height: 1.6;
-	margin: 0 0 1.6rem;
-}
-
-a {
-	color: #0056b3;
-	border-bottom: 2px solid transparent;
-	transition: all 0.5s ease-in-out;
-}
-
-a:hover {
-	color: #002348;
-	border-bottom: 2px solid #002348;
-}
-
-hr {
-	margin: 3.2rem 1.6rem;
-	color: #555555;
-	border-color: #555555;
-}
+	position: relative;
+  }
+  
+  .quote-container .quote:before,
+  .quote-container .quote:after {
+	content: '“'; /* Left quotation mark */
+	font-size: 40px;
+	position: absolute;
+	top: -10px;
+	color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .quote-container .quote:after {
+	content: '”'; /* Right quotation mark */
+	right: 0;
+	top: auto;
+	bottom: -20px;
+  }
+  
+  .quote-container .author {
+	font-size: 18px;
+	margin-top: 20px;
+	text-transform: uppercase;
+	font-weight: 500;
+	opacity: 0.7;
+  }
+  
 
 /* Layout */
 
